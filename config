@@ -43,12 +43,12 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-1 = Symbola
 font-2 = siji:pixelsize=10;1
 
-modules-left = 
+modules-left =
 modules-center = mpd
-modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth temperature powermenu
+modules-right = filesystem volume xkeyboard memory cpu wlan eth temperature powermenu
 
 tray-position = right
 tray-padding = 2
@@ -104,28 +104,6 @@ icon-next = 
 
 label-song-maxlen = 50
 label-song-ellipsis = true
-
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = BL
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #ff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
