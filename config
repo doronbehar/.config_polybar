@@ -101,13 +101,24 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
 
-icon-prev = ⏪
-icon-stop = ⏹
-icon-play = ►
+icon-play = ⏵
 icon-pause = ⏸
-icon-next = ⏩
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+icon-consume = ✀
+
+bar-progress-width = 30
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
 
 label-song-maxlen = 50
 label-song-ellipsis = true
