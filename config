@@ -53,8 +53,8 @@ font-7 = Material Icons:size=9
 font-8 = Material Icons:size=8
 font-9 = Material Icons:size=7
 
-modules-left =
-modules-center = mpd
+modules-left = mpd
+modules-center =
 modules-right = filesystem volume xkeyboard memory cpu wlan eth temperature powermenu
 
 cursor-click = pointer
