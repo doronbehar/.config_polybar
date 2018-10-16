@@ -50,6 +50,7 @@ font-6 = Symbola:size=7
 font-7 = Material Icons:size=9
 font-8 = Material Icons:size=8
 font-9 = Material Icons:size=7
+font-10 = DejaVu Sans:size=9
 
 modules-left = mpd
 modules-center = xwindow
@@ -62,6 +63,7 @@ bottom = true
 
 [module/xwindow]
 type = internal/xwindow
+label-font = 11
 label = %title:0:30:...%
 
 [module/xkeyboard]
@@ -114,6 +116,9 @@ bar-progress-indicator = |
 bar-progress-fill = ─
 bar-progress-empty = ─
 
+label-time-font = 11
+
+label-song-font = 11
 label-song-maxlen = 50
 label-song-ellipsis = true
 
