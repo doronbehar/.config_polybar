@@ -179,9 +179,21 @@ format-disconnected =
 [module/volume]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume> <bar-volume> <icon-port>
 label-volume = 🔊
 label-volume-foreground = ${root.foreground}
+
+icon-headphones = 
+icon-speaker = 
+icon-hdmi = 
+icon-bluetooth-headset =  
+icon-bluetooth-handsfree =   
+icon-bluetooth-speaker =  
+icon-bluetooth-headphones =  
+icon-bluetooth-portable =  
+icon-bluetooth-car =  
+icon-bluetooth-hifi =  
+icon-bluetooth-phone =  
 
 format-muted-prefix = "🔇 "
 format-muted-foreground = ${colors.foreground-alt}
@@ -206,8 +218,8 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
-warn-temperature = 50
+thermal-zone = 2
+warn-temperature = 70
 
 format = <ramp> <label>
 format-underline = #f50a4d
