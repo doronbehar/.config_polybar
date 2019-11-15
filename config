@@ -40,10 +40,10 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Hack Nerd Font Mono:size=10
-font-1 = Material Design Icons:size=11
-font-2 = DejaVu Sans:size=11
-font-3 = Hack Nerd Font Mono:size=12
+font-0 = "Hack Nerd Font Mono:size=10"
+font-1 = "Material Design Icons:size=11"
+font-2 = "DejaVu Sans:size=11"
+font-3 = "Hack Nerd Font Mono:size=12"
 
 modules-left = mpd
 modules-center = xwindow
@@ -59,8 +59,8 @@ type = internal/mpd
 
 host = ${env:MPD_HOST:127.0.0.1}
 
-format-online = ${env:POLYBAR_MPD_FORMAT:%{T2}<toggle> <label-time> <label-song>}
-label-offline = %{T2}%{T3} mpd is offline
+format-online = ${env:POLYBAR_MPD_FORMAT:%{T2}<toggle>%{T-} <label-time> <label-song>}
+label-offline = %{T2}%{T-} mpd is offline
 
 icon-play = 
 icon-pause = 
@@ -78,7 +78,7 @@ bar-progress-indicator = |
 bar-progress-fill = ─
 bar-progress-empty = ─
 
-label-song = %{T2}%{T3} %title%
+label-song = %{T3}%title%%{T-}
 label-song-maxlen = 50
 label-song-ellipsis = true
 
@@ -90,9 +90,9 @@ label = %{F#ff9900}%title:0:30:...% %{F-}
 [module/volume]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume> %{T2}:<icon-port>
+format-volume = <label-volume> %{T2}<bar-volume>%{T-} %{T2}:<icon-port>%{T-}
 label-font = 2
-label-volume = %{T2}
+label-volume = %{T2}%{T-}
 label-volume-foreground = ${root.foreground}
 
 icon-headphones = 
@@ -170,7 +170,7 @@ interval = 2
 format-prefix = "%{T4}%{T-} "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label = %percentage_used%%
+label = %percentage_used%%%{T-}
 
 [module/cpu]
 type = internal/cpu
@@ -178,14 +178,14 @@ interval = 2
 format-prefix = "%{T2} "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
-label = %percentage:2%%
+label = %{T-}%percentage:2%%
 
 [module/wlan]
 type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected = %{T2}<ramp-signal> <label-connected>
+format-connected = %{T2}<ramp-signal>%{T-} <label-connected>
 format-connected-underline = #9f78e1
 label-connected = %essid%
 
@@ -206,7 +206,7 @@ type = internal/temperature
 thermal-zone = 2
 warn-temperature = 70
 
-format = %{T4}<ramp> <label>
+format = %{T4}<ramp>%{T-} <label>
 format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
@@ -229,7 +229,7 @@ interval = 3.0
 format-connected-underline = #55aa55
 format-connected-prefix = "%{T2} "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+label-connected = %{T-}%local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
