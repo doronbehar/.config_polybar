@@ -57,7 +57,8 @@ bottom = true
 [module/mpd]
 type = internal/mpd
 
-host = ${env:MPD_HOST:127.0.0.1}
+host = ${env:MPD_HOST_ADDR:127.0.0.1}
+password = ${env:MPD_HOST_PWD}
 
 format-online = ${env:POLYBAR_MPD_FORMAT:%{T2}<toggle>%{T-} <label-time> <label-song>}
 label-offline = %{T2}%{T-} mpd is offline
