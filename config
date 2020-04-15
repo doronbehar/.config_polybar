@@ -188,7 +188,7 @@ interval = 3.0
 
 format-connected = %{T2}<ramp-signal>%{T-} <label-connected>
 format-connected-underline = #9f78e1
-label-connected = %essid% IP: %local_ip%
+label-connected = %essid% %{T2}%{T-} %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
