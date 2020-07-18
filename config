@@ -61,18 +61,18 @@ host = ${env:MPD_HOST_ADDR:127.0.0.1}
 password = ${env:MPD_HOST_PWD}
 
 format-online = ${env:POLYBAR_MPD_FORMAT:%{T2}<toggle>%{T-} <label-time> <label-song>}
-label-offline = %{T2}%{T-} mpd is offline
+label-offline = %{T2}󰎊%{T-} mpd is offline
 
-icon-play = 
-icon-pause = 
-icon-stop = 
-icon-prev = 
-icon-next = 
-icon-seekb = 
-icon-seekf = 
-icon-random = 
-icon-repeat = 
-icon-consume = 
+icon-play = 󰐊
+icon-pause = 󰏤
+icon-stop = 󰓛
+icon-prev = 󰑟
+icon-next = 󰈑
+icon-seekb = 󰓖
+icon-seekf = 󰓘
+icon-random = 󰒝
+icon-repeat = 󰓦
+icon-consume = 󰒿
 
 bar-progress-width = 30
 bar-progress-indicator = |
@@ -91,26 +91,26 @@ label = %{F#ff9900}%title:0:30:...% %{F-}
 [module/volume]
 type = internal/pulseaudio
 
-format-volume = <label-volume> %{T2}<bar-volume>%{T-} %{T2}:<icon-port>%{T-}
+format-volume = <label-volume> %{T2}<bar-volume>%{T-} %{T1}󰟥:<icon-port>%{T-}
 label-font = 2
-label-volume = %{T2}%{T-}
+label-volume = %{T2}󰕾%{T-}
 label-volume-foreground = ${root.foreground}
 
-icon-headphones = 
-icon-speaker = 
-icon-hdmi = 
-icon-bluetooth-headset =  
-icon-bluetooth-handsfree = 說
-icon-bluetooth-speaker = 說
-icon-bluetooth-headphones = 說
-icon-bluetooth-portable =  
-icon-bluetooth-car = 
-icon-bluetooth-hifi =  
-icon-bluetooth-phone = 
+icon-headphones = 󰋋
+icon-speaker = 󱀞
+icon-hdmi = 󰽟
+icon-bluetooth-headset = 󰋋󰂯
+icon-bluetooth-handsfree = 󰋎󰂯
+icon-bluetooth-speaker = 󱀞󰂯
+icon-bluetooth-headphones = 󰋋󰂯
+icon-bluetooth-portable = 󰋎󰂯
+icon-bluetooth-car = 󰄍󰂯
+icon-bluetooth-hifi = 󰥠󰂯
+icon-bluetooth-phone = 󰠕
 
 format-muted-foreground = ${colors.foreground-alt}
-format-muted = <label-muted> <bar-volume> %{T2}:<icon-port>
-label-muted = %{T2}
+format-muted = <label-muted> <bar-volume> %{T2}󰟥:<icon-port>
+label-muted = %{T2}󰖁
 label-muted-underline = ${colors.secondary}
 
 bar-volume-width = 10
@@ -136,7 +136,7 @@ interval = 25
 
 mount-0 = ${env:HOME}
 
-label-mounted = %{T2} %{F#0a81f5}%{T1}%{F-}: %percentage_used%%
+label-mounted = %{T2}󰨆 %{F#0a81f5}󰋜%{T1}%{F-}: %percentage_used%%
 label-mounted-underline = ${colors.secondary}
 
 [module/filesystem-root]
@@ -145,14 +145,14 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{T2} %{F#0a81f5}/%{T1}%{F-}: %percentage_used%%
+label-mounted = %{T2}󰨆 %{F#0a81f5}/%{T1}%{F-}: %percentage_used%%
 label-mounted-underline = ${colors.primary}
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = "%{T2} "
+format-prefix = "%{T2}󰌌 "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
@@ -168,7 +168,7 @@ label-indicator-underline = ${colors.secondary}
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "%{T4}%{T-} "
+format-prefix = "%{T4}󰘚%{T-} "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%%{T-}
@@ -176,7 +176,7 @@ label = %percentage_used%%%{T-}
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "%{T2} "
+format-prefix = "%{T2}󰍛 "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 label = %{T-}%percentage:2%%
@@ -188,7 +188,7 @@ interval = 3.0
 
 format-connected = %{T2}<ramp-signal>%{T-} <label-connected>
 format-connected-underline = #9f78e1
-label-connected = %essid% %{T2}%{T-} %local_ip%
+label-connected = %essid% %{T2}󰖈%{T-} %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -196,10 +196,11 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 爛
-ramp-signal-1 = 嵐
-ramp-signal-2 = 襤
-ramp-signal-3 = 蠟
+ramp-signal-0 = 󰤯
+ramp-signal-1 = 󰤟
+ramp-signal-2 = 󰤢
+ramp-signal-3 = 󰤥
+ramp-signal-4 = 󰤨
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/temperature]
@@ -228,7 +229,7 @@ interface = enp0s25
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = "%{T2} "
+format-connected-prefix = "%{T2}󰖈 "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %{T-}%local_ip%
 
